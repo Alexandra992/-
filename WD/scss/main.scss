@@ -1,0 +1,593 @@
+@import "../scss/nullstyle.scss";
+@import "../scss/vars.scss";
+
+//общие стили
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 162.5%;
+}
+
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.page {
+    flex: 1 1 auto;
+}
+
+._container {
+    max-width: 1129px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn {
+    background: $darkColor;
+    color: $light;
+}
+
+.title {
+    max-width: 540px;
+
+    &__header {
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 37px;
+        color: $title-color;
+        text-align: center;
+    }
+
+    &__text {
+        margin-top: 50px;
+        color: $text-color;
+        text-align: center;
+    }
+}
+
+//header--------------------------------------------------------------------------
+
+.header {
+    background: $medium-color;
+
+    &__menu {
+        margin: 0 10px;
+    }
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 160px;
+
+    &__logo {
+        font-family: Revalia;
+        font-size: 48px;
+        line-height: 60px;
+        color: $darkColor;
+        margin-right: 20px;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        flex: 0 0 55%;
+    }
+
+    &__item {
+        padding: 10px 20px 10px 0;
+    }
+
+    &__link {
+        letter-spacing: 0.1em;
+        color: $title-color;
+    }
+
+    &__link_active {
+        font-weight: 500;
+        color: $darkColor;
+    }
+}
+
+
+//Design-section--------------------------------------------------------------------
+.design {
+    background: $medium-color;
+
+    //&__container {}
+
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 90px;
+        padding-bottom: 146px;
+    }
+
+    &__img {
+        display: flex;
+        justify-content: center;
+        flex: 1 1 50%;
+
+        img {
+            display: block;
+            max-width: 357px;
+        }
+    }
+
+    &__content {
+        padding: 0 10px;
+        flex: 0 0 50%;
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: 48px;
+        line-height: 79px;
+        color: $title-color;
+    }
+
+    &__text {
+        color: $text-color;
+        margin-top: 50px;
+    }
+
+    &__btn {
+        padding: 25px 41px;
+        display: inline-block;
+        margin-top: 70px;
+    }
+}
+
+
+//aboutMe-section---------------------------------------------
+.aboutMe {
+
+    &__body {
+        display: flex;
+        justify-content: center;
+        padding: 119px 10px 100px 10px;
+    }
+}
+
+
+//icons-bar---------------------------------------------
+.icons-bar {
+    background: $darkColor;
+
+    &__container {
+        padding: 0 10px;
+    }
+
+    &__row {
+        min-height: 250px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        width: 141px;
+        padding: 5px 0;
+    }
+
+    &__item:not(:last-child) {
+        margin-right: 10px;
+    }
+
+    &__content {
+        color: $light;
+
+    }
+
+    &__count {
+        font-weight: 500;
+        font-size: 21px;
+        line-height: 25px;
+    }
+
+}
+
+
+// my-skills---------------------------------------------
+.my-skills {
+
+    &__wrap {
+        min-height: 653px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 10px;
+    }
+
+    &__content {
+        flex: 0 0 50%;
+        padding-right: 150px;
+    }
+
+    &__title {
+        margin-bottom: 50px;
+        text-align-last: left;
+    }
+
+    &__photo {
+
+        img {
+            max-width: 100%;
+        }
+    }
+}
+
+.item {
+
+    &__name {
+        font-size: 15px;
+        line-height: 26px;
+        color: $text-color;
+        margin-bottom: 20px;
+    }
+
+    &__border {
+        width: 100%;
+        height: 4px;
+        background-color: $greyColor;
+        position: relative;
+
+        &::after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: '';
+            width: 78%;
+            height: 4px;
+            background-color: $darkColor;
+        }
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 29px;
+    }
+
+}
+
+
+//my-work---------------------------------------------
+.my-work {
+    background: $medium-color;
+
+    &__wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 100px 0;
+        max-width: 1100px;
+    }
+
+    &__title {
+        margin-bottom: 57px;
+    }
+
+    &__video { 
+        position: relative;
+        padding: 0 0 50% 0;
+        width: 100%;
+    }
+}
+
+.video-group {
+    &__item {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__play {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+        button {
+            background: none;
+        }
+
+    }
+}
+
+
+
+//gallery---------------------------------------------
+.gallery {
+
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 28px 0 0 0;
+    }
+
+    &__item {
+        flex: 1 1 25%;
+        position: relative;
+    }
+
+    &__img {
+        max-width: 100%;
+    }
+    &__filter {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: $darkColor;
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        transition: ease-in-out 0.36s;
+        
+        img{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        };
+
+        
+
+    }
+    &__filter:hover{
+            opacity: 0.8;
+        }
+}
+
+
+//clients---------------------------------------------
+.clients {
+
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        min-height: 292px;
+        margin: 0 10px;
+    }
+
+}
+
+
+//write-me---------------------------------------------
+.write-me {
+    background: $medium-color;
+
+    &__container {
+        max-width: 540px;
+    }
+
+    &__wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 100px 0;
+        margin: 0 10px;
+    }
+
+    &__title {
+        margin-bottom: 65px;
+    }
+
+    &__form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    &__user {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 38px;
+
+    }
+
+    &__name,
+    &__email {
+        display: inline-block;
+        flex: 0 1 47%;
+        min-height: 50px;
+        font-size: 14px;
+        line-height: 23px;
+        color: #5F5D5D;
+        padding: 18px 20px;
+
+    }
+
+
+    &__message {
+        width: 100%;
+        min-height: 175px;
+        font-size: 14px;
+        line-height: 23px;
+        color: #5F5D5D;
+        padding: 18px 20px;
+        margin-bottom: 50px;
+
+    }
+
+    &__btn {
+        width: 190px;
+        height: 55px;
+        display: block;
+    }
+}
+
+
+//footer---------------------------------------------
+.footer {
+    background: $darkColor;
+
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 151px;
+        margin: 0 10px;
+    }
+
+    &__content {
+        color: $light;
+    }
+
+    &__name {
+        font-weight: 500;
+        font-size: 21px;
+        line-height: 25px;
+        margin-bottom: 20px;
+    }
+
+    &__copyright {
+        font-size: 13px;
+        line-height: 21px;
+    }
+
+    &__logo {
+        img:not(:last-child) {
+            margin-right: 22px;
+        }
+    }
+}
+
+
+
+
+
+
+
+//media-requersts---------------------------------------------
+
+//____________________________________________768px_______________________________________________________
+@media (max-width: 768px) {
+    .design {
+
+        &__body {
+            flex-direction: column-reverse;
+        }
+
+        &__title {
+            text-align: center;
+        }
+
+        &__text {
+            text-align: center;
+        }
+
+        &__btn {
+            text-align: center;
+            display: block;
+            width: 225px;
+            margin: 50px auto;
+        }
+    }
+
+    .icons-bar {
+        &__item {
+            margin-right: 10px;
+        }
+    }
+
+    .my-skills {
+
+        &__wrap {
+            flex-direction: column;
+        }
+
+        &__content {
+            width: 100%;
+            padding: 0 0 60px 0;
+        }
+
+        &__title {
+            margin: 40px 0;
+            text-align-last: center;
+        }
+
+    }
+}
+
+
+//____________________________________________576px_______________________________________________________
+@media (max-width: 576px) {
+    .design {
+        &__img {
+            img {
+                max-width: 300px;
+            }
+        }
+    }
+
+    .gallery {
+
+        &__item {
+            flex: 1 1 50%;
+        }
+
+    }
+}
+
+
+//____________________________________________470px_______________________________________________________
+@media (max-width: 470px) {
+    .icons-bar {
+        &__item {
+
+            max-width: 125px;
+
+        }
+    }
+
+    .write-me {
+        &__user {
+            flex-direction: column;
+        }
+
+        &__name,
+        &__email {
+            flex: 1 1 100%;
+        }
+
+        &__name {
+            margin-bottom: 20px;
+        }
+    }
+
+    .footer {
+
+        &__wrap {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        &__content {
+            text-align: center;
+        }
+
+        &__logo {
+            margin-top: 20px;
+        }
+    }
+}
